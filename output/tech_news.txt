@@ -1,0 +1,9 @@
+Title: New AI model passes coding benchmarks
+Link: https://example.com/tech/ai-benchmarks
+---
+Title: Rust 2.0 release candidate announced
+Link: https://example.com/tech/rust-2
+---
+Title: Quantum chip hits 1000 qubits
+Link: https://example.com/tech/quantum-1k
+---

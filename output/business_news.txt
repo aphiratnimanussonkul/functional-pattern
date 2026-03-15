@@ -1,0 +1,9 @@
+Title: Central banks hold rates steady
+Link: https://example.com/business/rates-hold
+---
+Title: Electric vehicle sales hit record
+Link: https://example.com/business/ev-sales
+---
+Title: Retail giant reports strong earnings
+Link: https://example.com/business/retail-earnings
+---
