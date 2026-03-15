@@ -72,9 +72,9 @@ extension (data: List[String])
 }
 
 extension (data: List[Int]) 
-    def transform(operation: (Int, Int) => Int)(param: Int): List[Int] = {
+    def transform(operation: (Int, Int) => Int, param: Int): List[Int] = {
     if (data.isEmpty) List.empty
-    else List(operation(data.head, param)) ++ data.tail.transform(operation(_)(param))
+    else List(operation(data.head, param)) ++ data.tail.transform(operation, param)
 }
 
 
