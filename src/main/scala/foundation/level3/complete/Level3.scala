@@ -1,3 +1,9 @@
+package foundation.leve3
+
+/** Custom container that behaves like Option (Maybe, Just, Empty). Step demos
+  * live in separate files: YourOwnContainerStep1.scala ... Step5.scala.
+  */
+
 sealed trait Maybe[+A]:
   def map[B](f: A => B): Maybe[B]
   def flatMap[B](f: A => Maybe[B]): Maybe[B]
@@ -24,7 +30,7 @@ def maybeParseInt(s: String): Maybe[Int] =
 def maybeDivide(a: Int, b: Int): Maybe[Int] =
   if b == 0 then Empty else Just(a / b)
 
-def runYourOwnContainer(): Unit =
+@main def runYourOwnContainer(): Unit =
   println("=== Your own container (Maybe, like Option) – full demo ===\n")
 
   println("1. Construction:")
@@ -51,7 +57,6 @@ def runYourOwnContainer(): Unit =
     m <- maybeParseInt("4")
     r <- maybeDivide(n, m)
   yield r
-
   println(s"   maybeParseInt(\"20\"), maybeParseInt(\"4\"), divide => $result")
   val failResult = for
     n <- maybeParseInt("20")
@@ -65,5 +70,3 @@ def runYourOwnContainer(): Unit =
   println(s"   Empty.fold(0)(_ => 0) = ${Empty.fold(0)(_ => 0)}")
 
   println("\nDone.")
-
-runYourOwnContainer()
